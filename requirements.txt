@@ -1,9 +1,0 @@
-numpy
-pandas
-matplotlib
-scipy
-xarray
-netCDF4
-jupyter
-seaborn
-cmocean
