@@ -1,5 +1,5 @@
 # Fdb version 4
-["bibtex main"] 0 "main.aux" "main.bbl" "main" 0 0
+["bibtex main"] 0 "main.aux" "main.bbl" "main" 1781111817.92987 0
   "c:/texlive/2024/texmf-dist/bibtex/bst/base/plain.bst" 1732742687 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "main.aux" 0 -1 0 "pdflatex"
   "references.bib" 0 -1 0 ""
@@ -7,9 +7,11 @@
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1778583763.16235 "c:/Users/iunam/Documents/GitHub/Wave-energy-analysis/report/main.tex" "main.pdf" "main" 1778583765.60937 0
-  "c:/Users/iunam/Documents/GitHub/Wave-energy-analysis/report/main.tex" 1778583759 1910 d24ce15559ca5bc4fb1759f150424063 ""
+["pdflatex"] 1781111813.54017 "c:/Users/iunam/Documents/GitHub/Wave-energy-analysis/report/source files/main.tex" "main.pdf" "main" 1781111817.93098 0
+  "c:/Users/iunam/Documents/GitHub/Wave-energy-analysis/report/source files/main.tex" 1781111805 3277 4ecc8331704bf19ec2a2aab0366ac050 ""
+  "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1732743495 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1732745796 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1732744820 1536 02c06700a42be0f5a28664c7273f82e7 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1732743479 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1732743479 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1732743479 1288 655e228510b4c2a1abe905c368440826 ""
@@ -18,6 +20,7 @@
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1732741663 35752 024fb6c41858982481f6968b5fc26508 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1732741663 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1732741663 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
+  "c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb" 1732743496 145929 5c9aebea9ba6e33fc93158c04a3bdcd8 ""
   "c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1732749213 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2024/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1732741952 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "c:/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1732742733 40635 c40361e206be584d448876bba8a64a3b ""
@@ -78,10 +81,12 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1732754760 5521760 8d14e9f23704d5fbe9a015e30cb48126 ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1732754980 3343610 01ad11552005f8afe535f291adf5ef1a ""
   "c:/texlive/2024/texmf.cnf" 1732754730 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1778583764 971 6fdce02fdb905d4876bb4cffe881e722 "pdflatex"
+  "images/maximum_wave_height_over_time.pdf" 1781107031 15378 18f0702ddd2fb2721098765dcbca7477 ""
+  "images/wave_height_evolution_0-720_24.pdf" 1780333482 80176259 248132f1e12714bc1b45599046652858 ""
+  "main.aux" 1781111816 1368 46d1e729c63dc531f014a476548f0def "pdflatex"
   "main.bbl" 0 -1 0 "bibtex main"
-  "main.out" 1778583764 695 cb48bb6bd2e7c2b0c55c912b71008222 "pdflatex"
-  "main.tex" 1778583759 1910 d24ce15559ca5bc4fb1759f150424063 ""
+  "main.out" 1781111816 835 159a1c547c553055e82d24426cddc875 "pdflatex"
+  "main.tex" 1781111805 3277 4ecc8331704bf19ec2a2aab0366ac050 ""
   (generated)
   "main.aux"
   "main.log"

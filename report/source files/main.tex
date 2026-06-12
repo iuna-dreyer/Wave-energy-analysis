@@ -17,7 +17,7 @@
 
     \Huge{Wave Energy Analysis}\vspace{0.5cm}
 
-    \large{Analysis of Real Ocean Wave Data from the Coast of Portugal Offshore}\vspace{1cm}
+    \large{Analysis of Real Ocean Wave Data off the Coast of Portugal}\vspace{1cm}
 
     Iuna Dreyer\vspace{0.3cm}
 
@@ -42,7 +42,11 @@ This project aims to analyse real ocean wave data obtained from the Copernicus M
 
 \subsection{Wave Data}
 
-The dataset used in this project is the Global Ocean Waves Analysis and Forecast product from the Copernicus Marine Service for the Portuguese offshore region during January, February and March 2026. The variables that were used in this analysis are the significant wave height and the mean wave period, sampled in 3-hour intervals.
+The dataset used in this project is the Global Ocean Waves Analysis and Forecast product from the Copernicus Marine Service for the Portuguese offshore region during January, February and March 2026. The variables that were used in this analysis are the significant wave height, the mean wave period and the mean wave direction, sampled in 3-hour intervals.
+
+First a general analysis was made of the whole dataset, verifying e.g. units and dimensions, the existence (or lack) of sampling gaps, means and standard deviations, correlations between variables, some temporal analysis, etc.
+
+Thereafter, a single point in space (-11° East, 41° North) was chosen for a deeper analysis
 
 
 \subsection{Dynamic Model}
@@ -53,21 +57,36 @@ The dataset used in this project is the Global Ocean Waves Analysis and Forecast
 
 \section{Results}
 
-To be completed.
+\subsection{General Analysis}
+The dataset has 721 points in time, from 2026-01-01 00:00 to 2026-04-01 00:00 (90 days total), with a sampling interval of 3 hours and no gaps. The units for time are nanoseconds in the datetime64[ns] format.
 
+The spacial coordinates are latitude (in degrees North) and longitude (in degrees East), creating a 2-dimensional grid of 97 points latitude between 36°N and 44°N by 61 points longitude between -13°E and -8°E, with no sampling gaps.
+
+The spectral significant wave height is represented in meters, has a mean of 3.76m with standard deviation 1.46m and a maximum of 10.48m at 40.5°N, -13°E, 2026-01-24 06:00. The spacial maximum over time is represented in Figure 1 and a timegrid of the spacial distribution in Figure 2.
+
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=0.6\textwidth]{images/maximum_wave_height_over_time.pdf}
+ \caption{Maximum wave height over time.}
+ \end{figure}
+
+
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=0.95\textwidth]{images/wave_height_evolution_0-720_24.pdf}
+ \caption{Wave height evolution.}
+ \end{figure}
 % =================================================
 
 \section{Discussion}
 
-To be completed.
+Tempestades em janeiro/fevereiro.
 
 % =================================================
 
 \section{Conclusion}
 
-To be completed.
 
-% =================================================
 
 \bibliographystyle{plain}
 \bibliography{references}

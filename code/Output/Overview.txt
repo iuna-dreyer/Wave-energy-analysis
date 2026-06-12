@@ -23,8 +23,8 @@ Units for longitude: Degrees East
 Latitude range: 36.0 - 44.0  (888.24km total)
 Longitude range: -13.0 - -8.0  (426.95km total)
 
-Latitude spacing: 9.2525km
-Longitude spacing: 7.115833333333333km
+Latitude spacing: 0.08333333333333333° (9.2525km)
+Longitude spacing: 0.08333333333333333° (7.115833333333333km)
 
 There are no gaps in the latitude sampling and a total of 97 points.
 There are no gaps in the longitude sampling and a total of 61 points.
@@ -37,15 +37,15 @@ Variable long name: Spectral significant wave height (Hm0)
 
 Height units: m (meters)
 
-The maximum wave height is 10.479999542236328m and occurs at (lat,long,time) coordinates (40.5, -13.0, 2026-01-24 06:00).
+The maximum wave height is 10.48m and occurs at (lat,long,time) coordinates (40.50, -13.00, 2026-01-24 06:00).
 
-The minimum wave height is 0.14000000059604645m and occurs at (lat,long,time) coordinates (37.08333206176758, -8.166666984558105, 2026-01-11 18:00).
+The minimum wave height is 0.14m and occurs at (lat,long,time) coordinates (37.08, -8.17, 2026-01-11 18:00).
 
 Percentiles (0.05, 0.25, 0.50, 0.75, 0.95)
 Wave Height (1.89, 2.73, 3.48, 4.58, 6.62)
 
-Mean: 3.764481544494629
-Standard deviation: 1.459257960319519
+Mean: 3.76
+Standard deviation: 1.46
 
 658273 values missing (15.43%)
 
@@ -57,15 +57,15 @@ Variable long name: Spectral moments (0,2) wave period (Tm02)
 
 Period units: s (seconds)
 
-The maximum wave period is 16.78999900817871s and occurs at (lat,long,time) coordinates (42.5, -8.833333015441895, 2026-01-23 18:00).
+The maximum wave period is 16.79s and occurs at (lat,long,time) coordinates (42.50, -8.83, 2026-01-23 18:00).
 
-The minimum wave period is 1.9399999380111694s and occurs at (lat,long,time) coordinates (37.08333206176758, -8.166666984558105, 2026-03-31 21:00).
+The minimum wave period is 1.94s and occurs at (lat,long,time) coordinates (37.08, -8.17, 2026-03-31 21:00).
 
 Percentiles (0.05, 0.25, 0.50, 0.75, 0.95)
 Wave Period (5.77, 6.84, 7.84, 8.91, 10.49)
 
-Mean: 7.9349260330200195
-Standard deviation: 1.465224266052246
+Mean: 7.93
+Standard deviation: 1.47
 
 658273 values missing (15.43%)
 
@@ -75,7 +75,7 @@ Wave Direction:
 ------------------------------
 Variable long name: Mean wave direction from (Mdir)
 
-Direction units: degree, 0°=N, 90°=E
+Direction units: degree, 0°=N -> 90°=E
 
 Mean direction: 303.85°
 Circular standard deviation: 35.42°
@@ -96,3 +96,11 @@ Direction has 69937 less missing values than height and period.
 0 points have missing direction and valid height and period.
 69937 points have valid direction and missing height and period.
 
+
+Correlations:
+------------------------------
+------------------------------
+Wave height and period correlation: 0.59
+(-1 strong negative correlation, 0 no correlation, +1 strong positive correlation)
+
+The direction sector 270°-280° has the highest mean wave height (4.58m).

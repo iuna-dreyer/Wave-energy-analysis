@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.28)  12 MAY 2026 12:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.28)  10 JUN 2026 18:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/iunam/Documents/GitHub/Wave-energy-analysis/report/main.tex
-(c:/Users/iunam/Documents/GitHub/Wave-energy-analysis/report/main.tex
+**"c:/Users/iunam/Documents/GitHub/Wave-energy-analysis/report/source files/main.tex"
+(c:/Users/iunam/Documents/GitHub/Wave-energy-analysis/report/source files/main.tex
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
 (c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -392,33 +392,48 @@ Package hyperref Info: Link coloring OFF on input line 14.
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-
-No file main.bbl.
+<images/maximum_wave_height_over_time.pdf, id=36, 390.58765pt x 291.0221pt>
+File: images/maximum_wave_height_over_time.pdf Graphic file (type pdf)
+<use images/maximum_wave_height_over_time.pdf>
+Package pdftex.def Info: images/maximum_wave_height_over_time.pdf  used on input line 69.
+(pdftex.def)             Requested size: 273.14923pt x 203.532pt.
 
 
 [1
 
-{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./main.aux)
+{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<images/wave_height_evolution_0-720_24.pdf, id=47, 997.93292pt x 875.67104pt>
+File: images/wave_height_evolution_0-720_24.pdf Graphic file (type pdf)
+<use images/wave_height_evolution_0-720_24.pdf>
+Package pdftex.def Info: images/wave_height_evolution_0-720_24.pdf  used on input line 76.
+(pdftex.def)             Requested size: 432.48051pt x 379.4975pt.
+
+
+[2 <./images/maximum_wave_height_over_time.pdf> <./images/wave_height_evolution_0-720_24.pdf>]
+No file main.bbl.
+
+
+[3] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: CB48BB6BD2E7C2B0C55C912B71008222;695.
+(rerunfilecheck)             Checksum: 159A1C547C553055E82D24426CDDC875;835.
  ) 
 Here is how much of TeX's memory you used:
- 13601 strings out of 473330
- 268732 string characters out of 5723877
- 644967 words of memory out of 5000000
- 36612 multiletter control sequences out of 15000+600000
- 559878 words of font info for 42 fonts, out of 8000000 for 9000
+ 13630 strings out of 473330
+ 269689 string characters out of 5723877
+ 648970 words of memory out of 5000000
+ 36634 multiletter control sequences out of 15000+600000
+ 560219 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,80p,422b,897s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on main.pdf (1 page, 60214 bytes).
+ 75i,6n,80p,462b,898s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on main.pdf (3 pages, 80253996 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 151 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+ 14 named destinations out of 1000 (max. 500000)
+ 75 words of extra memory for PDF output out of 10000 (max. 10000000)
 

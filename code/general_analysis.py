@@ -15,6 +15,8 @@ height_ds, h = ds['VHM0'], 'height'
 period_ds, p = ds['VTM02'], 'period'
 direction_ds, d = ds['VMDR'], 'direction'
 
+point_ds = ds.sel(longitude=-11.0, latitude=41.0, method="nearest") # it does yield exactly -11,41
+
 
 
 
@@ -66,8 +68,8 @@ def unit_analysis():
     lat_spacings, lat_spacing_counts = np.unique(np.diff(ds.latitude), return_counts=True)
     long_spacings, long_spacing_counts = np.unique(np.diff(ds.longitude), return_counts=True)
     dlat, dlong = lat_spacings[np.argmax(lat_spacing_counts)], long_spacings[np.argmax(long_spacing_counts)]
-    main_lat_spacing = np.average(lat_spacings[np.abs(lat_spacings-dlat)<0.1*dlat], weights=lat_spacing_counts[np.abs(lat_spacings-dlat)<0.1*dlat]) # overcomplicated way to get a mode and then averaging...
-    main_long_spacing = np.average(long_spacings[np.abs(long_spacings-dlong)<0.1*dlong], weights=long_spacing_counts[np.abs(long_spacings-dlong)<0.1*dlong]) # overcomplicated way to get a mode and then averaging...
+    main_lat_spacing = np.average(lat_spacings[np.abs(lat_spacings-dlat)<0.1*dlat], weights=lat_spacing_counts[np.abs(lat_spacings-dlat)<0.1*dlat]) # getting a mode and then averaging
+    main_long_spacing = np.average(long_spacings[np.abs(long_spacings-dlong)<0.1*dlong], weights=long_spacing_counts[np.abs(long_spacings-dlong)<0.1*dlong])
     lat_spacing_km = main_lat_spacing * km_lat
     long_spacing_km = main_long_spacing * km_long
     lat_gaps_Q = False if (len(lat_spacings)==1 or max(lat_spacings)-min(lat_spacings)<0.1*min(lat_spacings)) else True # if there is only one value, or the values don't differ in more than 10% of the smallest
@@ -80,8 +82,8 @@ def unit_analysis():
     text += f"Units for longitude: {long_units}\n\n"
     text += f"Latitude range: {lat_southmost} - {lat_northmost}  ({lat_range}km total)\n"
     text += f"Longitude range: {long_westmost} - {long_eastmost}  ({long_range}km total)\n\n"
-    text += f"Latitude spacing: {lat_spacing_km}km\n"
-    text += f"Longitude spacing: {long_spacing_km}km\n\n"
+    text += f"Latitude spacing: {main_lat_spacing}° ({lat_spacing_km}km)\n"
+    text += f"Longitude spacing: {main_long_spacing}° ({long_spacing_km}km)\n\n"
     text += f"There are {'' if lat_gaps_Q else 'no '}gaps in the latitude sampling and a total of {lat_number_points} points.\n"
     text += f"There are {'' if long_gaps_Q else 'no '}gaps in the longitude sampling and a total of {long_number_points} points.\n\n\n"
     
@@ -119,15 +121,16 @@ def unit_analysis():
     
     text += f"Variable long name: {h_name}\n\n"
     text += f"Height units: {h_units} (meters)\n\n"
-    text += f"The maximum wave height is {h_max}{h_units} and occurs at (lat,long,time) coordinates ({h_max_lat}, {h_max_long}, {pd.Timestamp(h_max_time).strftime("%Y-%m-%d %H:%M")}).\n\n"
-    text += f"The minimum wave height is {h_min}{h_units} and occurs at (lat,long,time) coordinates ({h_min_lat}, {h_min_long}, {pd.Timestamp(h_min_time).strftime("%Y-%m-%d %H:%M")}).\n\n"
+    text += f"The maximum wave height is {h_max:.2f}{h_units} and occurs at (lat,long,time) coordinates ({h_max_lat:.2f}, {h_max_long:.2f}, {pd.Timestamp(h_max_time).strftime("%Y-%m-%d %H:%M")}).\n\n"
+    text += f"The minimum wave height is {h_min:.2f}{h_units} and occurs at (lat,long,time) coordinates ({h_min_lat:.2f}, {h_min_long:.2f}, {pd.Timestamp(h_min_time).strftime("%Y-%m-%d %H:%M")}).\n\n"
     text += 'Percentiles (0.05, 0.25, 0.50, 0.75, 0.95)\n'
     text += f"Wave Height ({h_p5:.2f}, {h_p25:.2f}, {h_p50:.2f}, {h_p75:.2f}, {h_p95:.2f})\n\n"
-    text += f"Mean: {h_mean}\n"
-    text += f"Standard deviation: {h_std}\n\n"
+    text += f"Mean: {h_mean:.2f}\n"
+    text += f"Standard deviation: {h_std:.2f}\n\n"
     text += f"{h_n_missing} values missing ({h_pct_missing:.2f}%)\n\n\n"
     
     height_ds.max(dim=['latitude','longitude']).plot()
+    plt.ylabel('Maximum wave height')
     filename = 'Output/maximum_wave_height_over_time.pdf'
     plt.savefig(filename, format='pdf', bbox_inches='tight')
     plt.show()
@@ -165,12 +168,12 @@ def unit_analysis():
     
     text += f"Variable long name: {p_name}\n\n"
     text += f"Period units: {p_units} (seconds)\n\n"
-    text += f"The maximum wave period is {p_max}{p_units} and occurs at (lat,long,time) coordinates ({p_max_lat}, {p_max_long}, {pd.Timestamp(p_max_time).strftime('%Y-%m-%d %H:%M')}).\n\n"
-    text += f"The minimum wave period is {p_min}{p_units} and occurs at (lat,long,time) coordinates ({p_min_lat}, {p_min_long}, {pd.Timestamp(p_min_time).strftime('%Y-%m-%d %H:%M')}).\n\n"
+    text += f"The maximum wave period is {p_max:.2f}{p_units} and occurs at (lat,long,time) coordinates ({p_max_lat:.2f}, {p_max_long:.2f}, {pd.Timestamp(p_max_time).strftime('%Y-%m-%d %H:%M')}).\n\n"
+    text += f"The minimum wave period is {p_min:.2f}{p_units} and occurs at (lat,long,time) coordinates ({p_min_lat:.2f}, {p_min_long:.2f}, {pd.Timestamp(p_min_time).strftime('%Y-%m-%d %H:%M')}).\n\n"
     text += 'Percentiles (0.05, 0.25, 0.50, 0.75, 0.95)\n'
     text += f"Wave Period ({p_p5:.2f}, {p_p25:.2f}, {p_p50:.2f}, {p_p75:.2f}, {p_p95:.2f})\n\n"
-    text += f"Mean: {p_mean}\n"
-    text += f"Standard deviation: {p_std}\n\n"
+    text += f"Mean: {p_mean:.2f}\n"
+    text += f"Standard deviation: {p_std:.2f}\n\n"
     text += f"{p_n_missing} values missing ({p_pct_missing:.2f}%)\n\n\n"
     
     
@@ -192,7 +195,7 @@ def unit_analysis():
     
     
     text += f"Variable long name: {d_name}\n\n"
-    text += f"Direction units: {d_units}, 0°=N, 90°=E\n\n"
+    text += f"Direction units: {d_units}, 0°=N -> 90°=E\n\n"
     text += f"Mean direction: {d_mean:.2f}°\n"
     text += f"Circular standard deviation: {d_std:.2f}°\n\n"
     text += f"{d_n_missing} values missing ({d_pct_missing:.2f}%)\n\n\n"
@@ -232,7 +235,7 @@ def unit_analysis():
     
     text += f"{n_diff_h_p} points have missing height and valid period or vice-versa.\n"
     text += f"{n_missing_d_notmissing_h_p} points have missing direction and valid height and period.\n"
-    text += f"{n_notmissing_d_missing_h_p} points have valid direction and missing height and period.\n\n"
+    text += f"{n_notmissing_d_missing_h_p} points have valid direction and missing height and period.\n\n\n"
     
     fig, ax = plt.subplots(1, 2, figsize=(10, 5))
     
@@ -244,20 +247,47 @@ def unit_analysis():
     
     filename = 'Output/missing_values.pdf'
     fig.savefig(filename, format='pdf', bbox_inches='tight')
+    plt.show()
     
-    with open("Output/Overview.txt", "w", encoding="utf-8") as f:
+    
+    text += 'Correlations:\n------------------------------\n------------------------------\n'
+    
+    hravel = height_ds.values.ravel()
+    pravel = period_ds.values.ravel()
+    dravel = direction_ds.values.ravel()
+    
+    mask = ~np.isnan(hravel) & ~np.isnan(pravel)
+    hp_corr = np.corrcoef(hravel[mask], pravel[mask])[0, 1]
+    
+    bin_width_deg = 10
+    bins = np.arange(0, 361, bin_width_deg)
+    mask = ~np.isnan(hravel) & ~np.isnan(dravel)
+    mean_heights, counts = [], []
+    for d0, d1 in zip(bins[:-1], bins[1:]):
+        sector = (dravel >= d0) & (dravel < d1) & mask
+        mean_heights.append(np.mean(hravel[sector]))
+        counts.append(np.sum(sector))
+    max_idx = np.argmax(mean_heights)
+    
+    text += f"Wave height and period correlation: {hp_corr:.2f}\n(-1 strong negative correlation, 0 no correlation, +1 strong positive correlation)\n\n"
+    text += f"The direction sector {bins[max_idx]:3d}°-{bins[max_idx+1]:3d}° has the highest mean wave height ({mean_heights[max_idx]:.2f}{h_units})."
+    
+    plt.figure(figsize=(10,4))
+    plt.plot(bins[:-1] + 5, mean_heights, marker="o")
+    #plt.plot(bins[:-1] + 5, counts, marker="x")
+    
+    plt.xlabel("Wave direction (°)")
+    plt.ylabel("Mean wave height (m)")
+    plt.grid(True)
+    
+    filename = f"Output/height-direction_sector{bin_width_deg}deg.pdf"
+    fig.savefig(filename, format='pdf', bbox_inches='tight')
+    plt.show()
+    
+    with open('Output/Overview.txt', 'w', encoding='utf-8') as f:
         f.write(text)
     print(text)
-
-
-
-
-def au():
-    print('\n\n\nhigh waves associated with specific directions?\n------------------------------------------------------------------------')
-    
-
-
-
+#unit_analysis()
 
 def plot_timegrid(var=h, i_tstart=0, i_tend=len(ds.time)-1, nplots=24, ncols=6):
     
@@ -284,6 +314,7 @@ def plot_timegrid(var=h, i_tstart=0, i_tend=len(ds.time)-1, nplots=24, ncols=6):
             pcm = ax.quiver(lon, lat, arrow_length*np.sin(theta), arrow_length*np.cos(theta),data.values[::step,::step],cmap='hsv',scale_units='xy',scale=1,clim=(0, 360))
         else:
             pcm = ax.pcolormesh(ds.longitude,ds.latitude,data,shading='auto',cmap='viridis',vmin=vmin,vmax=vmax)
+            #ax.scatter(-11,41, color='red', marker='x')
         
         ax.set_title(str(t.values)[:16])
         ax.set_xlabel('Longitude')
@@ -296,15 +327,18 @@ def plot_timegrid(var=h, i_tstart=0, i_tend=len(ds.time)-1, nplots=24, ncols=6):
         ax.remove()
     
     fig.colorbar(pcm,ax=axes.tolist(),shrink=0.95,label=label)
-    filename = f"Output/wave_{var}_evolution_{i_tstart}-{i_tend}_{nplots}.pdf"
+    filename = f"Output/wave_{var}_evolution_{i_tstart}-{i_tend}_{nplots}.pdf" #'Output/chosen_point_-11,41.pdf'
     fig.savefig(filename, format='pdf', bbox_inches='tight')
     print(f"Saved figure to: {filename}")
     
     plt.show()
+#plot_timegrid()
 
+def point_analysis():
+    df = point_ds[['VHM0', 'VTM02', 'VMDR']].to_dataframe().rename(columns={'VHM0': 'H', 'VTM02': 'T', 'VMDR': 'Dir'}).drop(columns=["latitude", "longitude"])
+    print(df)
 
-
-
+#point_analysis()
 
 
 
