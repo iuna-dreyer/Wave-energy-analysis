@@ -61,27 +61,27 @@ cmems_mod_glo_wav_anfc_0.083deg_PT3H-i_1778234914435.nc
 ## Methods
 
 1. **Data Acquisition**
-- Loading operational wave data from NetCDF files provided by the Copernicus Marine Services using `xarray`.
+    - Loading operational wave data from NetCDF files provided by the Copernicus Marine Services using `xarray`.
 
 2. **Exploratory Analysis**
-- Analysing units and dimensions.
-- Assessing spatial and temporal variability of wave conditions.
-- Computing summary statistics, distributions, and time series.
-- Creating and exporting overview plots and text file.
+    - Analysing units and dimensions.
+    - Assessing spatial and temporal variability of wave conditions.
+    - Computing summary statistics, distributions, and time series.
+    - Creating and exporting overview plots and text file.
 
 3. **Data Selection**
-- Selecting a representative offshore point for time-series-based and energy analysis.
+    - Selecting a representative offshore point for time-series-based and energy analysis.
 
 4. **Wave Energy Estimation**
-- Computing wave power using standard deep-water wave energy relations based on significant wave height and wave period of a basic sinusoid wave.
+    - Computing wave power using standard deep-water wave energy relations based on significant wave height and wave period of a basic sinusoid wave.
 
 5. **Dynamic Modelling**
-- Using a simplified single-degree-of-freedom mass-spring-damper system  to represent a generic wave energy converter.
-- Taking wave height time series as external forcing input.
+    - Using a simplified single-degree-of-freedom mass-spring-damper system  to represent a generic wave energy converter.
+    - Taking wave height time series as external forcing input.
 
 6. **Visualisation**
-- Inputting to the model the time-series on the selected point.
-- Plotting the results in order to allow for interptretation.
+    - Inputting to the model the time-series on the selected point.
+    - Plotting the results in order to allow for interptretation.
 
 
 ## Tools
