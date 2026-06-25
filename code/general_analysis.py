@@ -15,7 +15,8 @@ height_ds, h = ds['VHM0'], 'height'
 period_ds, p = ds['VTM02'], 'period'
 direction_ds, d = ds['VMDR'], 'direction'
 
-point_ds = ds.sel(longitude=-11.0, latitude=41.0, method="nearest") # it does yield exactly -11,41
+point_coords = (-12,40)
+point_ds = ds.sel(longitude=point_coords[0], latitude=point_coords[1], method="nearest") # it does yield exactly -12,40
 
 
 
@@ -281,7 +282,7 @@ def unit_analysis():
     plt.grid(True)
     
     filename = f"Output/height-direction_sector{bin_width_deg}deg.pdf"
-    fig.savefig(filename, format='pdf', bbox_inches='tight')
+    plt.savefig(filename, format='pdf', bbox_inches='tight')
     plt.show()
     
     with open('Output/Overview.txt', 'w', encoding='utf-8') as f:
@@ -289,7 +290,7 @@ def unit_analysis():
     print(text)
 #unit_analysis()
 
-def plot_timegrid(var=h, i_tstart=0, i_tend=len(ds.time)-1, nplots=24, ncols=6):
+def plot_timegrid(var=h, i_tstart=0, i_tend=len(ds.time)-1, nplots=24, ncols=6, x=False):
     
     label = 'Significant Wave Height (m)' if var=='height' else 'Mean Wave Period (s)' if var=='period' else 'Wave Direction (degrees)'
     var_ds = height_ds if var=='height' else period_ds if var=='period' else direction_ds
@@ -314,8 +315,11 @@ def plot_timegrid(var=h, i_tstart=0, i_tend=len(ds.time)-1, nplots=24, ncols=6):
             pcm = ax.quiver(lon, lat, arrow_length*np.sin(theta), arrow_length*np.cos(theta),data.values[::step,::step],cmap='hsv',scale_units='xy',scale=1,clim=(0, 360))
         else:
             pcm = ax.pcolormesh(ds.longitude,ds.latitude,data,shading='auto',cmap='viridis',vmin=vmin,vmax=vmax)
-            #ax.scatter(-11,41, color='red', marker='x')
         
+        
+        if isinstance(x,int):
+            ax.scatter(point_coords[0],point_coords[1], color='red', marker='x')
+
         ax.set_title(str(t.values)[:16])
         ax.set_xlabel('Longitude')
         ax.set_ylabel('Latitude')
@@ -323,11 +327,20 @@ def plot_timegrid(var=h, i_tstart=0, i_tend=len(ds.time)-1, nplots=24, ncols=6):
         ax.coastlines()
         ax.add_feature(cfeature.LAND, facecolor='lightgray')
     
+    
     for ax in axes[len(selected_times):]:
         ax.remove()
     
-    fig.colorbar(pcm,ax=axes.tolist(),shrink=0.95,label=label)
-    filename = f"Output/wave_{var}_evolution_{i_tstart}-{i_tend}_{nplots}.pdf" #'Output/chosen_point_-11,41.pdf'
+    if isinstance(x,int):
+        for i in range(len(axes)):
+            if i!=x:
+                fig.delaxes(axes[i])
+
+        fig.colorbar(pcm,ax=axes[x],shrink=0.95,label=label)
+        filename = f"Output/chosen_point_{point_coords[0]},{point_coords[1]}_{var}_ax{x}.pdf"
+    else:
+        fig.colorbar(pcm,ax=axes.tolist(),shrink=0.95,label=label)
+        filename = f"Output/wave_{var}_evolution_{i_tstart}-{i_tend}_{nplots}.pdf" 
     fig.savefig(filename, format='pdf', bbox_inches='tight')
     print(f"Saved figure to: {filename}")
     

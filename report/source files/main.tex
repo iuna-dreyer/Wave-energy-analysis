@@ -8,6 +8,7 @@
 \usepackage{siunitx}
 \usepackage{float}
 \usepackage{hyperref}
+\usepackage{subcaption}
 
 % Title Section
 % -----------------------------------------------------------
@@ -46,7 +47,7 @@ The dataset used in this project is the Global Ocean Waves Analysis and Forecast
 
 First a general analysis was made of the whole dataset, verifying e.g. units and dimensions, the existence (or lack) of sampling gaps, means and standard deviations, correlations between variables, some temporal analysis, etc.
 
-Thereafter, a single point in space (-11° East, 41° North) was chosen for a deeper analysis
+Thereafter, a single point in space (-12° East, 40° North) was chosen for a deeper analysis.
 
 
 \subsection{Dynamic Model}
@@ -76,11 +77,75 @@ The spectral significant wave height is represented in meters, has a mean of 3.7
   \includegraphics[width=0.95\textwidth]{images/wave_height_evolution_0-720_24.pdf}
  \caption{Wave height evolution.}
  \end{figure}
+
+
+The spectral moments (0,2) wave period is represented in second, has a mean of 7.93s with standard deviation 1.47s, a maximum of 16.79s at 42.50°N, -8.83°E, 2026-01-23 18:00, and a minimum of 1.94s at 37.08°N, -8.17°E, 2026-03-31 21:00. A timegrid of the spacial distribution of the wave period is represented in Figure 3.
+
+The wave hight and period correlation is of 0.59, where -1 would represent a strong negative correlation, 0 no correlation, and +1 a strong positive correlation.
+
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=0.95\textwidth]{images/wave_period_evolution_0-720_24.pdf}
+ \caption{Wave period evolution.}
+ \end{figure}
+
+The mean wave direction from where the waves originate is represented in degrees, such that 0°=N and 90°=E. The mean direction is 303.85° with a circular standard deviation of 35.42°. A histogram of the wave directions is represented in Figure 4 and a timegrid of the spacial distribution in Figure 5.
+
+
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=0.6\textwidth]{images/directions_histogram.pdf}
+ \caption{Histogram of directions.}
+ \end{figure}
+
+
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=0.95\textwidth]{images/wave_direction_evolution_0-720_24.pdf}
+ \caption{Wave direction evolution.}
+ \end{figure}
+
+The direction sector 270°-280° has the highest mean wave height (4.58m). The mean wave height per 10° direction sector is represented in Figure 6.
+
+ \begin{figure}[H]
+ \centering
+  \includegraphics[width=0.8\textwidth]{images/height-direction_sector10deg.pdf}
+ \caption{Mean wave height by direction sector.}
+ \end{figure}
+
+
+The missing datapoint correspond to the coastline. In all three datasets, the missing points are constant over time and exactly the same in the wave height and period datasets (a total of 658273 values , corresponding to 15.43\% of the data). In the wave direction dataset, there are 69937 points with values that are considered land in the other two sets. Figure 7 represents the points where the direction dataset disagrees with the other two as to what is land.
+
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=0.8\textwidth]{images/missing_values.pdf}
+ \caption{Missing values (land) disagreements.}
+ \end{figure}
+
+
+
+
+
 % =================================================
 
 \section{Discussion}
 
 Tempestades em janeiro/fevereiro.
+
+Chosen point, why there?
+
+\begin{figure}[H]
+ \centering
+\begin{subfigure}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/chosen_point_-12,40_direction_ax0.pdf}
+ \end{subfigure}
+ \begin{subfigure}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/chosen_point_-12,40_height_ax6.pdf}
+ \end{subfigure}
+ \caption{Selected single point for further analysis: -12° East, 40° North.}
+ \end{figure}
 
 % =================================================
 

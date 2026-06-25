@@ -1,5 +1,5 @@
 # Fdb version 4
-["bibtex main"] 0 "main.aux" "main.bbl" "main" 1781111817.92987 0
+["bibtex main"] 0 "main.aux" "main.bbl" "main" 1782323109.57802 0
   "c:/texlive/2024/texmf-dist/bibtex/bst/base/plain.bst" 1732742687 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "main.aux" 0 -1 0 "pdflatex"
   "references.bib" 0 -1 0 ""
@@ -7,8 +7,8 @@
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1781111813.54017 "c:/Users/iunam/Documents/GitHub/Wave-energy-analysis/report/source files/main.tex" "main.pdf" "main" 1781111817.93098 0
-  "c:/Users/iunam/Documents/GitHub/Wave-energy-analysis/report/source files/main.tex" 1781111805 3277 4ecc8331704bf19ec2a2aab0366ac050 ""
+["pdflatex"] 1782323102.7202 "c:/Users/iunam/Documents/GitHub/Wave-energy-analysis/report/source files/main.tex" "main.pdf" "main" 1782323109.5792 0
+  "c:/Users/iunam/Documents/GitHub/Wave-energy-analysis/report/source files/main.tex" 1782323101 6010 131b01cf82a833aacb1cd534df628e54 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1732743495 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1732745796 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1732744820 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -47,6 +47,9 @@
   "c:/texlive/2024/texmf-dist/tex/latex/base/atveryend-ltx.sty" 1732747616 2378 05fbb4f2b23b0e142f8cd3440c37e72e ""
   "c:/texlive/2024/texmf-dist/tex/latex/base/size11.clo" 1732747616 8464 921883e485804f1e88db60bc47ff1592 ""
   "c:/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty" 1732742862 6078 f1cb470c9199e7110a27851508ed7a5c ""
+  "c:/texlive/2024/texmf-dist/tex/latex/caption/caption.sty" 1732743073 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
+  "c:/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty" 1732743073 72619 ee90b6612147680fd73c3b1406a74245 ""
+  "c:/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty" 1732743073 12494 0c0cdb824278a4d51cefeb2e79901315 ""
   "c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1732745113 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "c:/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1732745228 46845 3b58f70c6e861a13d927bff09d35ecbc ""
   "c:/texlive/2024/texmf-dist/tex/latex/float/float.sty" 1732745705 6749 16d2656a1984957e674b149555f1ea1d ""
@@ -81,12 +84,19 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1732754760 5521760 8d14e9f23704d5fbe9a015e30cb48126 ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1732754980 3343610 01ad11552005f8afe535f291adf5ef1a ""
   "c:/texlive/2024/texmf.cnf" 1732754730 713 e69b156964470283e0530f5060668171 ""
+  "images/chosen_point_-12,40_direction_ax0.pdf" 1781884959 3260583 1fa09c990792eaa24cb99d6d11de5379 ""
+  "images/chosen_point_-12,40_height_ax6.pdf" 1781884949 3346482 553386708c132e24ce25aaaac780ace9 ""
+  "images/directions_histogram.pdf" 1781107033 10591 d6e5b86a27000ac39e5938e8f8d0c998 ""
+  "images/height-direction_sector10deg.pdf" 1781879291 12573 87225c564002d50980ae4438cd001eb4 ""
   "images/maximum_wave_height_over_time.pdf" 1781107031 15378 18f0702ddd2fb2721098765dcbca7477 ""
+  "images/missing_values.pdf" 1781107035 144828 6684bb97c7e5906a2e4c351e203c6c7a ""
+  "images/wave_direction_evolution_0-720_24.pdf" 1780333575 78333171 b179bbb4272d009b69cdc82349e1afd4 ""
   "images/wave_height_evolution_0-720_24.pdf" 1780333482 80176259 248132f1e12714bc1b45599046652858 ""
-  "main.aux" 1781111816 1368 46d1e729c63dc531f014a476548f0def "pdflatex"
+  "images/wave_period_evolution_0-720_24.pdf" 1780333525 80135307 1fb545febcbce71bdb3296564887b416 ""
+  "main.aux" 1782323108 2309 3d63692e24e211d418c0b2dedb202e8d "pdflatex"
   "main.bbl" 0 -1 0 "bibtex main"
-  "main.out" 1781111816 835 159a1c547c553055e82d24426cddc875 "pdflatex"
-  "main.tex" 1781111805 3277 4ecc8331704bf19ec2a2aab0366ac050 ""
+  "main.out" 1782323108 835 159a1c547c553055e82d24426cddc875 "pdflatex"
+  "main.tex" 1782323101 6010 131b01cf82a833aacb1cd534df628e54 ""
   (generated)
   "main.aux"
   "main.log"

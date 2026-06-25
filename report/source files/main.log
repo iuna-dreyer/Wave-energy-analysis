@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.28)  10 JUN 2026 18:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.28)  24 JUN 2026 18:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -297,8 +297,33 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip56
+) (c:/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (c:/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (c:/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen185
+\captionmargin=\dimen186
+\caption@leftmargin=\dimen187
+\caption@rightmargin=\dimen188
+\caption@width=\dimen189
+\caption@indent=\dimen190
+\caption@parindent=\dimen191
+\caption@hangindent=\dimen192
+Package caption Info: Standard document class detected.
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 14.
+\c@caption@flags=\count316
+\c@continuedfloat=\count317
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count318
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count319
+)
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 15.
  (c:/texlive/2024/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2024/06/23 v1.3e Standard LaTeX Color (DPC)
  (c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -307,29 +332,29 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
  (c:/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count316
+\l__color_backend_stack_int=\count320
 \l__pdf_internal_box=\box66
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -367,16 +392,16 @@ LaTeX Font Info:    ... okay on input line 14.
 
 (c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count317
-\scratchdimen=\dimen185
+\scratchcounter=\count321
+\scratchdimen=\dimen193
 \scratchbox=\box67
-\nofMPsegments=\count318
-\nofMParguments=\count319
+\nofMPsegments=\count322
+\nofMParguments=\count323
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count320
-\MPscratchDim=\dimen186
-\MPnumerator=\count321
-\makeMPintoPDFobject=\count322
+\MPscratchCnt=\count324
+\MPscratchDim=\dimen194
+\MPnumerator=\count325
+\makeMPintoPDFobject=\count326
 \everyMPtoPDFconversion=\toks28
 ) (c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -386,16 +411,18 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (c:/texlive/2024/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 14.
-Package hyperref Info: Link coloring OFF on input line 14.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 15.
+Package hyperref Info: Link coloring OFF on input line 15.
  (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 <images/maximum_wave_height_over_time.pdf, id=36, 390.58765pt x 291.0221pt>
 File: images/maximum_wave_height_over_time.pdf Graphic file (type pdf)
 <use images/maximum_wave_height_over_time.pdf>
-Package pdftex.def Info: images/maximum_wave_height_over_time.pdf  used on input line 69.
+Package pdftex.def Info: images/maximum_wave_height_over_time.pdf  used on input line 70.
 (pdftex.def)             Requested size: 273.14923pt x 203.532pt.
 
 
@@ -405,15 +432,59 @@ Package pdftex.def Info: images/maximum_wave_height_over_time.pdf  used on input
 <images/wave_height_evolution_0-720_24.pdf, id=47, 997.93292pt x 875.67104pt>
 File: images/wave_height_evolution_0-720_24.pdf Graphic file (type pdf)
 <use images/wave_height_evolution_0-720_24.pdf>
-Package pdftex.def Info: images/wave_height_evolution_0-720_24.pdf  used on input line 76.
+Package pdftex.def Info: images/wave_height_evolution_0-720_24.pdf  used on input line 77.
 (pdftex.def)             Requested size: 432.48051pt x 379.4975pt.
 
 
 [2 <./images/maximum_wave_height_over_time.pdf> <./images/wave_height_evolution_0-720_24.pdf>]
+<images/wave_period_evolution_0-720_24.pdf, id=118, 997.93292pt x 875.67104pt>
+File: images/wave_period_evolution_0-720_24.pdf Graphic file (type pdf)
+<use images/wave_period_evolution_0-720_24.pdf>
+Package pdftex.def Info: images/wave_period_evolution_0-720_24.pdf  used on input line 88.
+(pdftex.def)             Requested size: 432.48051pt x 379.4975pt.
+<images/directions_histogram.pdf, id=119, 409.55824pt x 263.16693pt>
+File: images/directions_histogram.pdf Graphic file (type pdf)
+<use images/directions_histogram.pdf>
+Package pdftex.def Info: images/directions_histogram.pdf  used on input line 97.
+(pdftex.def)             Requested size: 273.14923pt x 175.52583pt.
+
+
+[3 <./images/wave_period_evolution_0-720_24.pdf>]
+<images/wave_direction_evolution_0-720_24.pdf, id=159, 996.32265pt x 875.67104pt>
+File: images/wave_direction_evolution_0-720_24.pdf Graphic file (type pdf)
+<use images/wave_direction_evolution_0-720_24.pdf>
+Package pdftex.def Info: images/wave_direction_evolution_0-720_24.pdf  used on input line 104.
+(pdftex.def)             Requested size: 432.48051pt x 380.09877pt.
+<images/height-direction_sector10deg.pdf, id=160, 611.26181pt x 263.16693pt>
+File: images/height-direction_sector10deg.pdf Graphic file (type pdf)
+<use images/height-direction_sector10deg.pdf>
+Package pdftex.def Info: images/height-direction_sector10deg.pdf  used on input line 112.
+(pdftex.def)             Requested size: 364.19667pt x 156.79709pt.
+
+
+[4 <./images/directions_histogram.pdf> <./images/wave_direction_evolution_0-720_24.pdf>]
+<images/missing_values.pdf, id=229, 613.65271pt x 333.19482pt>
+File: images/missing_values.pdf Graphic file (type pdf)
+<use images/missing_values.pdf>
+Package pdftex.def Info: images/missing_values.pdf  used on input line 121.
+(pdftex.def)             Requested size: 364.19667pt x 197.75258pt.
+<images/chosen_point_-12,40_direction_ax0.pdf, id=230, 202.35437pt x 241.60178pt>
+File: images/chosen_point_-12,40_direction_ax0.pdf Graphic file (type pdf)
+<use images/chosen_point_-12,40_direction_ax0.pdf>
+Package pdftex.def Info: images/chosen_point_-12,40_direction_ax0.pdf  used on input line 141.
+(pdftex.def)             Requested size: 143.40028pt x 171.2214pt.
+<images/chosen_point_-12,40_height_ax6.pdf, id=231, 198.9784pt x 241.14455pt>
+File: images/chosen_point_-12,40_height_ax6.pdf Graphic file (type pdf)
+<use images/chosen_point_-12,40_height_ax6.pdf>
+Package pdftex.def Info: images/chosen_point_-12,40_height_ax6.pdf  used on input line 145.
+(pdftex.def)             Requested size: 143.40028pt x 173.7932pt.
+
+
+[5 <./images/height-direction_sector10deg.pdf> <./images/missing_values.pdf>]
 No file main.bbl.
 
 
-[3] (./main.aux)
+[6 <./images/chosen_point_-12,40_direction_ax0.pdf> <./images/chosen_point_-12,40_height_ax6.pdf>] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
@@ -422,18 +493,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 159A1C547C553055E82D24426CDDC875;835.
  ) 
 Here is how much of TeX's memory you used:
- 13630 strings out of 473330
- 269689 string characters out of 5723877
- 648970 words of memory out of 5000000
- 36634 multiletter control sequences out of 15000+600000
+ 15103 strings out of 473330
+ 299630 string characters out of 5723877
+ 673650 words of memory out of 5000000
+ 38089 multiletter control sequences out of 15000+600000
  560219 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,80p,462b,898s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,80p,569b,896s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (3 pages, 80253996 bytes).
+Output written on main.pdf (6 pages, 245483272 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 75 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 411 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 110 words of extra memory for PDF output out of 10000 (max. 10000000)
 
